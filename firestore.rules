@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Default-deny catch-all safety net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Secure user profiles
+    match /users/{userId} {
+      allow get, create, update, delete: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "LeveAI",
+  "description": "Seu coach de saúde e bem-estar inteligente com IA. Plano de 30 dias, cardápios, treinos, hidratação e receitas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
